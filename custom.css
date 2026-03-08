@@ -18,7 +18,7 @@
 }
 
 .nexmoe-post-copyright a {
-    color: #ffaa00 !important;  /* 亮蓝色链接 */
+    color: #ffaa00 !important;  /* 亮蓝色链�? */
     text-decoration: none !important;
 }
 
@@ -54,6 +54,17 @@
   100% { transform: translateY(0px); }
 }
 
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 .neg-sin-float {
     animation:
         neg-sin 1s linear infinite;
@@ -78,4 +89,66 @@
   margin: 5px;
   cursor: pointer;
   transition: opacity 0.8s ease;
+}
+
+.linear-basic {
+    background: linear-gradient(rgb(193, 40, 193), rgb(0, 162, 255));
+    padding: 20px;
+    color: white;
+}
+
+
+.linear-direction {
+    background: linear-gradient(to top, rgb(193, 40, 193), rgb(0, 162, 255));
+    /* to right, to left, to bottom, to top, to bottom right  */
+}
+
+
+.linear-multi {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+}
+
+
+.linear-stops {
+    background: linear-gradient(to right, red 0%, orange 30%, yellow 60%, green 100%);
+}
+
+.gradient-text1 {
+    background: linear-gradient(45deg, rgb(193, 40, 193), rgb(0, 162, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* font-size: 36px; */
+    font-weight: bold;
+}
+
+.gradient-text2 {
+    background: linear-gradient(to right, rgb(34, 93, 195), rgb(162, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* font-size: 40px; */
+    font-weight: bold;
+}
+
+.gradient-text3 {
+    background: radial-gradient(circle at top left, #ff6b6b, #4ecdc4, #45b7d1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 44px;
+}
+
+.breath-rainbow {
+    animation:
+      breathe 5s ease-in-out infinite,
+      gradientMove 3s linear infinite,
+      float 5s ease-in-out infinite;  
+    background: linear-gradient(45deg, rgb(193, 40, 193), rgb(0, 162, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* font-size: 36px; */
+    font-weight: bold;
+    
 }
